@@ -1,0 +1,39 @@
+@model PartyInvites.Models.ZiyaretciCevabi
+@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<head>
+    <title>Davetiye formu</title>
+</head>
+<body>
+    <form asp-action="DavetiyeFormu" method="post">
+<div>
+    <label asp-for="AdiSoyadi">Adınız Soyadınız :</label>
+    <input asp-for="AdiSoyadi">
+</div>
+
+<div>
+    <label asp-for="Mail">E-posta :</label>
+    <input asp-for="Mail">
+</div>
+    
+<div>
+    <label asp-for="Telefon">telefon :</label>
+    <input asp-for="Telefon"> 
+</div>
+
+    <select asp-for="KatilimDurumu">
+        <option value=""> bir seçenek seçiniz</option>
+        <option value="True">evet</option>
+        <option value="False">hayır</option> 
+    </select>
+    <button type="submit" >gonder</button>
+
+</form>
+</body>
+
+
+
+
+
